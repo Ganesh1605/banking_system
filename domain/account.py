@@ -1,4 +1,3 @@
-
 class Account:
     def __init__(self, account_id, customer_id, account_number, balance=0):
         self.account_id = account_id
@@ -10,10 +9,14 @@ class Account:
         self.balance += amount
 
     def withdraw(self, amount):
-        if amount <= self.balance:
-            self.balance -= amount
-        else:
-            print("Insufficient funds")
+        try:
+            if amount <= self.balance:
+                self.balance -= amount
+            else:
+                raise ValueError("Insufficient funds")
+        except ValueError as e:
+            print(f"Error during withdrawal: {e}")
+            raise
 
     def get_balance(self):
         return self.balance
