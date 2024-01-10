@@ -1,5 +1,6 @@
 # Banking System Application
-
+ ##Python_version 
+ Python 3.8.11  
 ## Overview
 This repository contains a simplified version of a banking system application, developed following the clean architecture principles. The system is organized into three layers: Domain, Use Case, and Infrastructure.
 
@@ -60,6 +61,8 @@ Execute individual test scripts in the `tests` folder.
 python -m unittest tests/test_create_account.py
 python -m unittest tests/test_make_transaction.py
 python -m unittest tests/test_generate_statement.py
+
+
 
 
 
